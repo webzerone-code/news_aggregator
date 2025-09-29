@@ -1,0 +1,46 @@
+<?php
+
+return [
+    'providers'=>[
+        'OpenAPI'=>[
+            'name'=>'OpenAPI',
+            'data-type'=>'json',
+            'data-crawler'=>true,
+            'url'=>env('API_KEY_OPEN_API_URL'),
+            'parameters'=>[
+                'apiKey'=>env('API_KEY_OPEN_API_KEY'),
+                'sources'=>env('API_KEY_OPEN_API_SOURCES'),
+                'sortBy'=>env('API_KEY_OPEN_API_SORT'),
+                'language'=>env('API_KEY_OPEN_API_LANGUAGE'),
+            ],
+            'parsePerPage'=>env('API_KEY_OPEN_API_PARSE_PER_PAGE'),
+            'maxPages'=>env('API_KEY_OPEN_API_MAX_PAGES'),
+            'timeIntervals'=>env('API_KEY_OPEN_API_TIME_INTERVALS'),
+            'fullBackDBCheck'=>env('API_KEY_OPEN_API_FULL_BACK_DB_CHECK'),
+        ],
+        'Guardian'=>[
+            'name'=>'Guardian',
+            'data-type'=>'json',
+            'data-crawler'=>false,
+            'url'=>env('API_KEY_GUARDIAN_API_URL'),
+            'parameters'=>[
+                'api-key'=>env('API_KEY_GUARDIAN_API_KEY'),
+                'sortBy'=>env('API_KEY_GUARDIAN_API_SORT'),
+                'lang'=>env('API_KEY_GUARDIAN_API_LANGUAGE'),
+                'show-fields'=>env('API_KEY_GUARDIAN_API_FIELDS'),
+            ],
+            'parsePerPage'=>env('API_KEY_GUARDIAN_API_PARSE_PER_PAGE'),
+            'maxPages'=>env('API_KEY_GUARDIAN_API_MAX_PAGES'),
+            'timeIntervals'=>env('API_KEY_GUARDIAN_API_TIME_INTERVALS'),
+            'fullBackDBCheck'=>env('API_KEY_GUARDIAN_API_FULL_BACK_DB_CHECK'),
+        ],
+        'BBC'=>[
+            'name'=>'BBC',
+            'data-type'=>'xml',
+            'data-crawler'=>true,
+            'url'=>env('API_KEY_BBC_API_URL'),
+            'parameters'=>[],
+            'fullBackDBCheck'=>env('API_KEY_BBC_API_FULL_BACK_DB_CHECK'),
+        ]
+    ]
+];
