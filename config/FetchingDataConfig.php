@@ -17,6 +17,8 @@ return [
             'maxPages'=>env('API_KEY_OPEN_API_MAX_PAGES'),
             'timeIntervals'=>env('API_KEY_OPEN_API_TIME_INTERVALS'),
             'fullBackDBCheck'=>env('API_KEY_OPEN_API_FULL_BACK_DB_CHECK'),
+            'hasCategory'=>false,
+            'categoryKey'=>null
         ],
         'Guardian'=>[
             'name'=>'Guardian',
@@ -33,6 +35,8 @@ return [
             'maxPages'=>env('API_KEY_GUARDIAN_API_MAX_PAGES'),
             'timeIntervals'=>env('API_KEY_GUARDIAN_API_TIME_INTERVALS'),
             'fullBackDBCheck'=>env('API_KEY_GUARDIAN_API_FULL_BACK_DB_CHECK'),
+            'hasCategory'=>true,
+            'categoryKey'=>'sectionName'
         ],
         'BBC'=>[
             'name'=>'BBC',
@@ -41,6 +45,8 @@ return [
             'url'=>env('API_KEY_BBC_API_URL'),
             'parameters'=>[],
             'fullBackDBCheck'=>env('API_KEY_BBC_API_FULL_BACK_DB_CHECK'),
+            'hasCategory'=>false,
+            'categoryKey'=>null
         ]
     ]
 ];

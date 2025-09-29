@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Services;
+namespace App\Services\DataFetching;
 
 use Carbon\Carbon;
-use Illuminate\Support\Facades\Http;
 
 class OpenApi extends BaseProvider implements DataFetchingInterface
 {

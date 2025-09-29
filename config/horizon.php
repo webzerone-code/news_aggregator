@@ -190,7 +190,8 @@ return [
                 'default',
                 'OpenAPI',
                 'Guardian',
-                'BBC'
+                'BBC',
+                'data-process'
             ],
             'balance' => 'auto',
             'autoScalingStrategy' => 'time',

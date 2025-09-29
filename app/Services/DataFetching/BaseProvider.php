@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services;
+namespace App\Services\DataFetching;
 
 use App\Models\RawDataModel;
 use Carbon\Carbon;
@@ -79,6 +79,7 @@ abstract class BaseProvider
     }
     protected function store(array $data):void
     {
+        $data = array_reverse($data);
         foreach (array_chunk($data, 500) as $chunk)
         {
             RawDataModel::query()->insert($chunk);

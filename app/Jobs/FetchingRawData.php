@@ -2,8 +2,8 @@
 
 namespace App\Jobs;
 
-use App\Services\DataFetchingInterface;
-use App\Services\FetchFactory;
+use App\Services\DataFetching;
+use App\Services\DataFetching\FetchFactory;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Queue\Queueable;
 use Illuminate\Support\Facades\App;
