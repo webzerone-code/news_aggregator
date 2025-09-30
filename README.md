@@ -49,4 +49,3 @@ it has 4 extra jobs 3 for the job fetching queues and one for cleaning the data 
 2- in data process its good to update it to use ai to get closest category from the title instead of the current way<br/>
 3- the data crawler depending on article tag which may not be accurate for the source it would be good idea to have table or array the links array and its correspond  tage will start crawl from <br/>
 4- data process class need some refactor<br/>
-5- adding user perfectness route to store user preferences so loading the data according to his/here preferences <br/>
