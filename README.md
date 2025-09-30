@@ -14,11 +14,10 @@ this is sample env config for the parameters fetching data uses<br/>
 2- laravel horizon config <br/>
 
 it has 4 extra jobs 3 for the job fetching queues and one for cleaning the data <br/>
-3- configure the .env file QUEUE_CONNECTION to work with raids <br/>
-4- add mysql db connection <br/>
-5- run migrations <br/>
-6- run db CategoriesSeeder.php seed file<br/>
-5- running the jobs<br/>
+3- add mysql db connection <br/>
+4- run migrations <br/>
+5- run db CategoriesSeeder.php seed file<br/>
+6- running the jobs<br/>
 - start horizon run  php artisan horizon<br/>
 - start the jobs run php artisan schedule:work<br/>
 
