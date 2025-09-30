@@ -18,7 +18,7 @@ class NewsController extends Controller
             ->withRelation(['category'])
             ->withTitle($parameters['title'])
             ->withCategories($parameters['categories'])
-            ->withSources($parameters['sources'])
+            //->withSources($parameters['sources'])
             ->orderBy('published_at')
             ->paginate($parameters['perPage']);
         $items = NewsResponseResource::collection($data->getCollection());
