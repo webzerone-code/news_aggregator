@@ -9,7 +9,7 @@ please find FetchingDataConfing.php file in the config folder and add modify  it
 this is sample env config for the parameters fetching data uses<br/>
 
 
-1- rename env.example file to .env which match my .env file and supply api keys for the first providers  
+1- rename env.example file to .env which match my .env file and supply api keys for the first 2 providers and database connections  
 
 2- laravel horizon config <br/>
 
