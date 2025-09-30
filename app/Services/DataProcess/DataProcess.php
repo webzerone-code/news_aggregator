@@ -2,7 +2,6 @@
 
 namespace App\Services\DataProcess;
 
-use App\Jobs\FetchingRawData;
 use App\Models\Category;
 use App\Models\News;
 use App\Models\RawDataModel;
@@ -69,7 +68,7 @@ class DataProcess implements IProcessInterface
             }
         });
 
-        //$this->updateProcessedRecord($processedIDs);
+        $this->updateProcessedRecord($processedIDs);
         $this->insertProcessedRecord($cleanedData);
 
     }
