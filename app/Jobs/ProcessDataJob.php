@@ -23,6 +23,6 @@ class ProcessDataJob implements ShouldQueue
      */
     public function handle(): void
     {
-        app(DataProcess::class);
+        app()->make(DataProcess::class)->handle();
     }
 }
