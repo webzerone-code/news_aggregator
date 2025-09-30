@@ -5,7 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 
-class APINewsPreferenceController extends Controller
+class NewsPreferenceController extends Controller
 {
     public function getPreference()
     {

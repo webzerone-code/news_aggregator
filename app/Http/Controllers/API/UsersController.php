@@ -18,4 +18,10 @@ class UsersController extends Controller
         );
         return response()->json($preference);
     }
+
+    public function logout()
+    {
+        Auth()->user()->token()->revoke();
+        return response()->json(['message' => 'Successfully logged out']);
+    }
 }
