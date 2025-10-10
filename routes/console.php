@@ -8,5 +8,5 @@ use Illuminate\Support\Facades\Artisan;
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote');
-Schedule::Command(FetchDataCommand::class)->everyThirtyMinutes();
-Schedule::Command(DataProcessCommand::class)->everyThirtyMinutes();
+Schedule::Command(FetchDataCommand::class)->everyThirtyMinutes();//everyThirtyMinutes();
+Schedule::Command(DataProcessCommand::class)->everyThirtyMinutes();//everyThirtyMinutes();

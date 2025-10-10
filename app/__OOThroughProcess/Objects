@@ -1,0 +1,48 @@
+- you could argue that Inheritance and Compositions is the only way to build  classes from another classes
+- Cat is-a Animal
+- Car Has-a Engine
+so to recap the chapter
+- Abstraction
+Abstraction is about showing only what is necessary and hiding the unnecessary details
+- Encapsulation
+encapsulating the data and behavior into single object is of primary importance in OO development .  A single object contains both its data and behaviors and can hide what it wants from other objects
+- Inheritance
+A class can inherit from another class and take advantage of the attributes and methods defined by the superclass
+- Polymorphism
+Polymorphism means that similar objects can respond to the same message in different ways.
+- Composition
+Composition means that and object is build from other objects (Like Car it has Engine,Lights,Wheels ... etc)
+
+-OOP Rule
+Changing implementation doesnt require changing the interface
+- class is defined not only what it does but also by what it needs (its dependencies)
+- interfaces define capabilities composition supplies dependencies
+-Relationship
+Association: “uses”
+Aggregation: “has-a, part can live alone”
+Composition: “owns, part dies with whole”
+
+ Association (Driver → Car)
+   +----------------+         +------+
+   |    Driver      | ------> | Car  |
+   +----------------+         +------+
+   // Driver uses Car; no ownership; Car can exist independently
+
+2️⃣ Aggregation (Team → Player)
+   +----------------+ <>------ +---------+
+   |     Team       |           | Player  |
+   +----------------+           +---------+
+   // Team has Players; Players can exist independently; hollow diamond
+
+3️⃣ Composition (Car → Engine)
+   +----------------+ ◆------ +--------+
+   |      Car       |         | Engine |
+   +----------------+         +--------+
+   // Car owns Engine; Engine cannot exist without Car; filled diamond
+
+---> : simple association (no ownership)
+
+<>-- : aggregation (hollow diamond, weak ownership)
+
+◆-- : composition (filled diamond, strong ownership)
+

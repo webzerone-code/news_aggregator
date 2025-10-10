@@ -1,0 +1,42 @@
+1️⃣ Layered / N-Tier Architecture
+    Classic “Presentation → Business → Data”
+    Dependencies flow downward
+    Simple but can leak logic between layers if not disciplined
+
+2️⃣ Onion Architecture
+    Domain (Entities) at the center
+    Layers point inwards only
+    Infrastructure/frameworks on the outer layer
+
+3️⃣ Hexagonal Architecture (Ports & Adapters)
+    Domain at the center
+    Interfaces (ports) define interaction points
+    Adapters implement these ports (DB, UI, APIs)
+    Promotes decoupling from frameworks
+
+4️⃣ Clean Architecture
+    Similar to Onion / Hexagonal
+    Emphasizes Use Cases / Application Layer between domain and outer adapters
+    Dependencies always point inward
+
+5️⃣ CQRS (Command Query Responsibility Segregation)
+    Splits commands (write) and queries (read) into separate models
+    Often used with Event Sourcing
+
+6️⃣ Event-Driven / Message-Based Architecture
+    Components communicate via events or messages
+    Can scale independently, supports async workflows
+    Often used in microservices
+
+7️⃣ Microservices Architecture
+    Entire system split into small, independently deployable services
+    Each service can have its own internal architecture (Onion, Hexagonal, etc.)
+    Communicate via APIs or events
+
+8️⃣ Layered Hexagonal Hybrid (sometimes called Modular Monolith)
+    Monolith structured with modules following ports/adapters or onion rules
+    Easier to evolve into microservices later
+
+
+-- what is entity
+describe every object live in the system with its relations with other object
