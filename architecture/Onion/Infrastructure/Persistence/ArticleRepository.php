@@ -1,6 +1,6 @@
 <?php
 
-namespace Architecture\Onion\Persistence\Repositories;
+namespace Architecture\Onion\Infrastructure\Persistence;
 
 use Architecture\Onion\Domain\Entity\Article;
 use Architecture\Onion\Domain\Repository\ArticleRepositoryInterface;

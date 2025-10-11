@@ -18,7 +18,7 @@ class ArticlesController extends Controller
     public function add_article()
     {
         $articleObject = $this->articleService->createArticle("My Article Title", "My Article Content");
-        return $articleObject->getId();
+        return ['id'=>$articleObject->getId(),'title'=>$articleObject->getTitle(),'content'=>$articleObject->getContent()];
         return "welcome to Onion Architecture";
     }
 }

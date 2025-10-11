@@ -2,9 +2,8 @@
 
 namespace App\Providers;
 
-use Architecture\Onion\Application\Services\ArticleService;
 use Architecture\Onion\Domain\Repository\ArticleRepositoryInterface;
-use Architecture\Onion\Persistence\Repositories\ArticleRepository;
+use Architecture\Onion\Infrastructure\Persistence\ArticleRepository;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider

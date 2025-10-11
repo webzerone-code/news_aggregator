@@ -3,3 +3,72 @@
 - inner layers define interfaces. outer layers implement interfaces
 - direction of coupling is toward the center
 - all application core code can be compiled and run separate from infrastructure
+
+
+🧅 1️⃣ Domain Layer (The Core of the Onion)
+“The business rules that never change no matter what framework or DB you use.”
+Contains:
+Entities (like Article, User, Invoice)
+Value Objects (like Email, Money)
+Domain Events (e.g., ArticlePublished)
+Domain Interfaces (e.g., ArticleRepositoryInterface)
+Domain Services (business logic that doesn’t belong to a single entity)
+Never depends on anything else.
+No Laravel, no HTTP, no DB.
+It’s pure PHP and can live alone in a package.
+🧩 2️⃣ Application Layer
+“The use cases — orchestrating the domain.”
+Contains:
+Application Services (like your ArticleService)
+Use Cases (e.g., PublishArticle, SendArticleEmail)
+Input/Output DTOs
+Calls domain objects + interfaces, but never infrastructure.
+⚙️ 3️⃣ Infrastructure Layer
+“Adapters to external systems.”
+Contains:
+Database implementations (Eloquent, Doctrine, raw SQL)
+Mailers (Laravel Mail, SMTP, Mailgun, etc.)
+Notifications
+File storage
+Logging
+APIs
+Framework integrations (controllers, commands, jobs)
+🧭 4️⃣ Presentation Layer (a.k.a. Interface Layer or API Layer)
+“How the world interacts with your app.”
+Contains:
+Controllers
+Commands (CLI)
+Jobs
+GraphQL resolvers, API endpoints, etc.
+It calls Application layer use cases — nothing else.
+
+
+architecture/
+│
+├── Domain/
+│   ├── Entities/
+│   │   └── Article.php
+│   ├── Repositories/
+│   │   └── ArticleRepositoryInterface.php
+│   └── Services/
+│       └── ArticleBusinessRules.php
+│
+├── Application/
+│   ├── DTOs/
+│   ├── Services/
+│   │   └── ArticleService.php
+│   └── UseCases/
+│       └── PublishArticle.php
+│
+├── Infrastructure/
+│   ├── Persistence/
+│   │   └── EloquentArticleRepository.php   ← your current class
+│   ├── Mail/
+│   │   └── LaravelMailer.php
+│   └── Notifications/
+│       └── LaravelNotifier.php
+│
+└── Presentation/
+    └── Http/
+        └── Controllers/
+            └── ArticleController.php
