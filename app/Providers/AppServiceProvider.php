@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use Architecture\Onion\Application\Services\ArticleService;
+use Architecture\Onion\Domain\Repository\ArticleRepositoryInterface;
+use Architecture\Onion\Persistence\Repositories\ArticleRepository;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -11,7 +14,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->bind(ArticleRepositoryInterface::class, ArticleRepository::class);
     }
 
     /**

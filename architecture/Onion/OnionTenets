@@ -1,0 +1,5 @@
+4 tenets of onion architecture
+- the application is build around and independent object model
+- inner layers define interfaces. outer layers implement interfaces
+- direction of coupling is toward the center
+- all application core code can be compiled and run separate from infrastructure

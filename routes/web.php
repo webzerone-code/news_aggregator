@@ -87,3 +87,4 @@ Route::get('/bbc', function () {
 Route::get('/horizon', function () {
     return redirect('horizon/dashboard');
 });
+Route::get('/add_article', [\App\Http\Controllers\ArticlesController::class, 'add_article']);
